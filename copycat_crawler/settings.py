@@ -22,7 +22,6 @@ ITEM_PIPELINES = {
 IMAGES_STORE = 'img'
 
 IMAGES_THUMBS = {
-    'small': (50, 50),
     'big': (270, 270),
 }
 
