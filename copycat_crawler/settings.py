@@ -14,6 +14,17 @@ BOT_NAME = 'copycat_crawler'
 SPIDER_MODULES = ['copycat_crawler.spiders']
 NEWSPIDER_MODULE = 'copycat_crawler.spiders'
 
+# Configure item pipelines
+# See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
+ITEM_PIPELINES = {
+   'scrapy.pipelines.images.ImagesPipeline': 1,
+}
+IMAGES_STORE = 'img'
+
+IMAGES_THUMBS = {
+    'small': (50, 50),
+    'big': (270, 270),
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'copycat_crawler (+http://www.yourdomain.com)'
@@ -59,17 +70,7 @@ NEWSPIDER_MODULE = 'copycat_crawler.spiders'
 #    'scrapy.telnet.TelnetConsole': None,
 #}
 
-# Configure item pipelines
-# See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'scrapy.pipelines.images.ImagesPipeline': 1,
-}
-IMAGES_STORE = 'img'
 
-IMAGES_THUMBS = {
-    'small': (50, 50),
-    'big': (270, 270),
-}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
