@@ -17,12 +17,12 @@ NEWSPIDER_MODULE = 'copycat_crawler.spiders'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'scrapy.pipelinesgit .images.ImagesPipeline': 1,
+   'scrapy.pipelines.images.ImagesPipeline': 1,
 }
 IMAGES_STORE = 'img'
 
 IMAGES_THUMBS = {
-    'big': (270, 270),
+    'square': (270, 270),
 }
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
